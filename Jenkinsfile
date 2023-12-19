@@ -2,11 +2,19 @@ pipeline {
 
   agent any
   stages {
-    stage('build'){
-      // steps
-      steps{
-        
-      }
+    stage('Test') {
+                steps {
+                        bat './gradlew test'
+                }
+            }
+
+    stage('Generate Cucumber Reports') {
+                steps {
+
+                }
+            }
+        }
+
     }
 }
 
