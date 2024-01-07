@@ -4,18 +4,10 @@ pipeline {
   stages {
     stage('Test') {
            steps {
-                                bat './gradlew test'
+            bat './gradlew test'
                  }
             }
-
-    stage('Generate Cucumber Reports') {
-                steps {
-                bat './gradlew cucumber'
-                }
-            }
-        }
-
     }
-}
+
 
 }
