@@ -1,13 +1,12 @@
-pipeline { 
 
-  agent any
-  stages {
-    stage('Test') {
-           steps {
-            bat './gradlew test'
-                 }
+pipeline {
+    agent any  // Specifies that the pipeline can run on any available agent (node)
+
+    stages {
+        stage('Test') {  // Defines a stage named 'Test'
+            steps {
+                bat './gradlew test'  // Executes the Gradle test using the bat step (for Windows)
             }
+        }
     }
 
-
-}
