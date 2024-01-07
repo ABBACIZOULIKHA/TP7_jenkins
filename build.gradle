@@ -22,8 +22,8 @@ publishing {
         maven {
             url System.getenv("url")
             credentials {
-                username System.getenv("username")
-                password System.getenv("password")
+                username System.getenv("abbaci")
+                password System.getenv("abbaci")
             }
         }
     }
