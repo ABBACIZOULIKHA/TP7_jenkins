@@ -1,12 +1,15 @@
-
 pipeline {
-    agent any  // Specifies that the pipeline can run on any available agent (node)
-
+    agent none
     stages {
-        stage('Test') {  // Defines a stage named 'Test'
+        stage('Example') {
+            agent any
+            options {
+                // Timeout counter starts BEFORE agent is allocated
+                timeout(time: 1, unit: 'SECONDS')
+            }
             steps {
-                bat './gradlew test'  // Executes the Gradle test using the bat step (for Windows)
+                echo 'Hello World'
             }
         }
     }
-
+}
